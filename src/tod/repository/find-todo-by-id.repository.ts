@@ -5,11 +5,11 @@ import { PrismaService } from "src/shared/databases/prisma.database";
 
 
 @Injectable()
-export class CreateTodoRespository {
+export class FindAllTodoRespository {
     constructor(private readonly prisma: PrismaService) {}
 
 
-    async findById(id:string) {
+    async execute (id:string) {
         return await this.prisma.todo.findUnique({
             where: {id},
         });
