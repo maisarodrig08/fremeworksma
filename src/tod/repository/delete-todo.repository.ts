@@ -12,3 +12,4 @@ export class DeleteTodoRespository {
         return await this.prisma.todo.delete({ where:{id}})
     }
 }
+ 

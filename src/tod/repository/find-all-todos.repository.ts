@@ -5,7 +5,7 @@ import { PrismaService } from "src/shared/databases/prisma.database";
 
 
 @Injectable()
-export class CreateTodoRespository {
+export class FindTodoByIdRepository {
     constructor(private readonly prisma: PrismaService) {}
 
 
