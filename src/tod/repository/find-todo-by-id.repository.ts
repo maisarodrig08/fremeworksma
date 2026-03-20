@@ -1,11 +1,14 @@
 import { Injectable } from "@nestjs/common";
-import { CreateTodDto } from "../dto/create-tod.dto";
+import { CreateTodoDto } from "../dto/create-tod.dto";
 import { PrismaService } from "src/shared/databases/prisma.database";
 
 
 
 @Injectable()
 export class FindAllTodoRespository {
+    findAll() {
+        throw new Error("Method not implemented.");
+    }
     constructor(private readonly prisma: PrismaService) {}
 
 
