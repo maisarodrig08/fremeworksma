@@ -6,6 +6,9 @@ import { UpdateTodoDto } from "../dto/update-tod.dto";
 
 @Injectable()
 export class UpdateTodoRespository {
+    execute(id: string) {
+        throw new Error("Method not implemented.");
+    }
     constructor(private readonly prisma: PrismaService) { }
 
 
