@@ -14,7 +14,7 @@ export class DeleteTodoUseCase{
    
       async execute (id: string){
 try{
-        this.logger.log('Deleting toDo...');
+        this.logger.log('Updating toDo...');
 
         const todo = await this.findTodoByIdRepository.findById(id);
 
@@ -23,7 +23,7 @@ try{
         }
 
         await this .deleteTodoRepository.execute(id);
-        this.logger.log('ToDo deleted sucessfully!')
+        this.logger.log('ToDo Update sucessfully!')
         return todo;
        }catch (error) {
         this.logger.error(error);
