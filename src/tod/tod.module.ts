@@ -6,21 +6,17 @@ import * as UseCases from './use-cases';
 import * as Repositories from './repository';
 
 
-const UseCases = Object.values(UseCases);
+const useCases = Object.values(UseCases);
 const repositories = Object.values(Repositories);
 
 @Module({
   controllers: [TodController],
-  providers: [
-    TodService,
+  providers: [TodService,
     PrismaService,
     Logger,
     ...repositories,
-    ...UseCases,
+    ...useCases,
     
-  
-  
-  
   ],
 })
 export class TodModule {}

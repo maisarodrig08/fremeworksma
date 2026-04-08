@@ -3,6 +3,9 @@ import { FindAllTodoRespository } from "../repository";
 
 @Injectable()
 export class FindAllUseCase{
+  findAll() {
+    throw new Error('Method not implemented.');
+  }
     constructor(
         private readonly findAllTodosRepository: FindAllTodoRespository,
         private readonly logger: Logger

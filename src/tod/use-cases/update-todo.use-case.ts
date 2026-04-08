@@ -5,7 +5,7 @@ import { Injectable,Logger, NotFoundException } from "@nestjs/common";
 import { UpdateTodoRespository, FindTodoByIdRepository } from "../repository";
 
 @Injectable()
-export class DeleteTodoUseCase{
+export class UpdateTodoUseCase{
     constructor(
         private readonly updateTodoRepository: UpdateTodoRespository,
         private readonly findTodoByIdRepository: FindTodoByIdRepository,
