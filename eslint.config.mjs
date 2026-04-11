@@ -32,4 +32,18 @@ export default tseslint.config(
       "prettier/prettier": ["error", { endOfLine: "auto" }],
     },
   },
+  {
+    files: ['**/*.dto.ts'],
+    rules: {
+      // class-validator / class-transformer decorators are typed in ways that trigger false positives
+      '@typescript-eslint/no-unsafe-call': 'off',
+    },
+  },
+  {
+    files: ['**/shared/databases/**/*.ts'],
+    rules: {
+      // PrismaClient + driver adapter: super()/adapter ctor typings confuse no-unsafe-call
+      '@typescript-eslint/no-unsafe-call': 'off',
+    },
+  },
 );
